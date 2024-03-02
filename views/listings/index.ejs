@@ -1,0 +1,31 @@
+<% layout("/layout/boilerplate") -%>
+
+<head>
+    <link rel="stylesheet" href="/css/encrypt.css">
+    
+</head>
+
+<div class="main">
+    <h1>Text Encryption App</h1>
+
+    <form action="/encrypt" method="post">
+        <label for="originalText">Enter Text:</label>
+        <textarea name="originalText" id="originalText" class="originalText" required></textarea>
+
+        <% if (encryptedText) { %>
+            <div class="encrypted">
+                <label for="encryptedText">Encrypted Text:</label>
+                <div class="input-with-icon">
+                    <textarea class="encryptedText" readonly><%= encryptedText %></textarea>
+                    <i class="ri-clipboard-line"></i>
+                </div>
+            </div>
+        <% } else { %>
+            <p>No encryption result found.</p>
+        <% } %>
+
+        <button type="submit" class="btnsubmit">Encrypt</button>
+    </form>
+
+</div>
+<script src="/js/index.js"></script>

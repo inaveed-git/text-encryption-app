@@ -1,0 +1,35 @@
+<% layout("/layout/boilerplate") -%>
+
+<head>
+    <link rel="stylesheet" href="/css/decrypt.css">
+   
+</head>
+
+<div class="main">
+    <h1>Text Decryption App</h1>
+
+    <form action="/decrypt" method="get">
+
+        <label for="encryptedText">Enter Encrypted Text:</label>
+        <textarea name="encryptedText" id="encryptedText" required></textarea>
+
+        <% if (decryptedTextEntry) { %>
+            <div class="decrypted">
+                <label for="decryptedText">Decrypted Text:</label>
+                
+                <div class="input-with-icon">
+                    <textarea readonly  class="originalText" ><%= decryptedTextEntry.originalText %></textarea>
+                    <i class="ri-clipboard-line"></i>
+                </div>
+
+
+            </div>
+        <% } else { %>
+            <p>No decryption result found.</p>
+        <% } %>
+
+        <button type="submit" class="btnsubmit">Decrypt</button>
+    </form>
+</div>
+
+<script src="/js/decrypt.js"></script>

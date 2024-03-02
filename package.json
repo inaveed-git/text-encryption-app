@@ -1,0 +1,25 @@
+{
+  "name": "dynamicwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.9",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.3",
+    "express-ejs-layouts": "^2.5.1",
+    "joi": "^17.12.2",
+    "mongoose": "^8.2.0",
+    "path": "^0.12.7"
+
+
+  }
+}
